@@ -1,5 +1,26 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <style>
+            #custumers{
+                font-family: Arial,Arial, Helvetica, sans-serif;
+                border-collapse: collapse;
+                width: 50%;
+                text-align: center;
+            }
+            #custumers td, #custumers th{
+                border: 1px solid ;
+                padding: 4px;
+            }
+            #custumers tr:nth-child(even){background-color: rgb(245, 217, 196) ;}
+            #custumers tr:hover {background-color: #ddd;}
+            #custumers th{
+                padding-top: 12px;
+                padding-bottom: 12px;
+                background-color: rgb(243, 162, 104);
+            }
+        </style>
+    </head>
     <title>Trova</title>
     <body>
         <img src="https://akamai.sscdn.co/uploadfile/letras/playlists/3/a/b/9/3ab92363f7974d679f4194de9f389b5b.jpg" width="350">
@@ -10,7 +31,7 @@
             terceiro verso <br>
             quarto verso <br>
         </p>
-        <table>
+        <table id="custumers">
             <tr>
                 <th>Bebida</th>
                 <th>Preço</th>
@@ -18,6 +39,10 @@
             <tr>
                 <td>Cerveja</td>
                 <td>R$15,00</td>
+            </tr>
+            <tr>
+                <td>Whiskey</td>
+                <td>R$30,00</td>
             </tr>
         </table>
         
