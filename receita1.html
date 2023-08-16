@@ -2,19 +2,25 @@
 <html>
     <head>
         <style>
-            #custumers{
+            #div1{
+                display: flex;
+            }
+            #div1 table {
+                margin-right:8px ;
+            }
+            .custumers{
                 font-family: Arial,Arial, Helvetica, sans-serif;
                 border-collapse: collapse;
-                width: 50%;
+                width: 11%;
                 text-align: center;
             }
-            #custumers td, #custumers th{
+            .custumers td, .custumers th{
                 border: 1px solid ;
                 padding: 4px;
             }
-            #custumers tr:nth-child(even){background-color: rgb(245, 217, 196) ;}
-            #custumers tr:hover {background-color: #ddd;}
-            #custumers th{
+            .custumers tr:nth-child(even){background-color: rgb(245, 217, 196) ;}
+            .custumers tr:hover {background-color: #ddd;}
+            .custumers th{
                 padding-top: 12px;
                 padding-bottom: 12px;
                 background-color: rgb(243, 162, 104);
@@ -31,20 +37,36 @@
             terceiro verso <br>
             quarto verso <br>
         </p>
-        <table id="custumers">
-            <tr>
-                <th>Bebida</th>
-                <th>Preço</th>
-            </tr>
-            <tr>
-                <td>Cerveja</td>
-                <td>R$15,00</td>
-            </tr>
-            <tr>
-                <td>Whiskey</td>
-                <td>R$30,00</td>
-            </tr>
-        </table>
+        <div id="div1">
+            <table class="custumers">
+                <tr>
+                    <th>Bebida</th>
+                    <th>Preço</th>
+                </tr>
+                <tr>
+                    <td>Cerveja</td>
+                    <td>R$15,00</td>
+                </tr>
+                <tr>
+                    <td>Whiskey</td>
+                    <td>R$30,00</td>
+                </tr>
+            </table>
+            <table class="custumers">
+                <tr>
+                    <th>Bebida</th>
+                    <th>Preço</th>
+                </tr>
+                <tr>
+                    <td>Cerveja</td>
+                    <td>R$15,00</td>
+                </tr>
+                <tr>
+                    <td>Whiskey</td>
+                    <td>R$30,00</td>
+                </tr>
+            </table>
+        </div>
         
         <br>
         <p>
