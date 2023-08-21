@@ -21,3 +21,12 @@ a:hover{
 a:active{
     color: red;
 }
+
+img{
+    border-radius: 50%;
+}
+
+div.poeta{
+    background-color: #eee;
+    border-radius: 50px;
+}
