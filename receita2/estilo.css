@@ -26,7 +26,16 @@ img{
     border-radius: 50%;
 }
 
-div.poeta{
+#poeta{
     background-color: #eee;
     border-radius: 50px;
+}
+
+#div1{
+    display: flex;
+    padding: 20px 0px 0px 0px;
+}
+
+tr{
+    background-color: lightcoral;
 }
