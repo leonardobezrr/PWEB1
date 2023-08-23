@@ -4,16 +4,28 @@
       <meta charset="UTF-8">      
    </head>
    <body>
-      <div id="teste"><button id = "botaoCarregar">Carregando cervejas...</button></div>            
+      <div id="teste">
+        Carregar cervejas...
+      </div>
+    </br>
+      <div>
+        <button id = "botaoCarregar">Run</button>
+      </div>
+      <div id="show">
+
+      </div>            
    </body>   
    <script>
+    var opacidade = 0;
         function carregarDiv(){
-            let div = document.getElementById("teste")
+            let div = document.getElementById("show")
             div.innerHTML = "<h1>Heineken</h1>"
+
+            opacidade = 1
         }
 
         let botao = document.getElementById("botaoCarregar")
-        /*botao.onclick = carregarDiv*/
-        botao.addEventListener("click", carregarDiv)
+        
+        botao.onclick = carregarDiv
    </script>
 </html>
