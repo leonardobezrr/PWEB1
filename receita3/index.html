@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>   
+   <head>
+      <meta charset="UTF-8">      
+   </head>
+   <body>
+      <div id="teste"><button id = "botaoCarregar">Carregando cervejas...</button></div>            
+   </body>   
+   <script>
+        function carregarDiv(){
+            let div = document.getElementById("teste")
+            div.innerHTML = "<h1>Heineken</h1>"
+        }
+
+        let botao = document.getElementById("botaoCarregar")
+        botao.onclick = carregarDiv
+   </script>
+</html>
