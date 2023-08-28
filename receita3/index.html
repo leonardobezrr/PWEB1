@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>   
+
    <head>
       <meta charset="UTF-8">      
    </head>
+
    <body>
       <div id="teste">
         Carregar cervejas...
@@ -11,10 +13,9 @@
       <div>
         <button id = "botaoCarregar">Run</button>
       </div>
-      <div id="show">
+      <div id="show"></div>            
+   </body>  
 
-      </div>            
-   </body>   
    <script>
     var opacidade = 0;
         function carregarDiv(){
@@ -23,9 +24,8 @@
 
             opacidade = 1
         }
-
         let botao = document.getElementById("botaoCarregar")
-        
         botao.onclick = carregarDiv
    </script>
+   
 </html>
