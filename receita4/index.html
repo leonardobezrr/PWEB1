@@ -12,6 +12,10 @@
         
         <script>
             let cervejas = ["Guinnes","Heineken","Budwaiser","Brahma","Amstel","Devassa"]
+            
+            function transformar(item){
+                return `<table class="tabela1"><tr><td>${item}</td></tr></table>`
+            }
 
             function ordenarCervejas(){
                 let div = document.getElementById("meu amor")
@@ -29,8 +33,19 @@
          
             }
 
-            function transformar(item){
-                return `<table class="tabela1"><tr><td>${item}</td></tr></table>`
+            function embaralharCervejas(){
+                let div = document.getElementById("meu amor")
+                let cervejasEmbaralhadas = shuffle(cervejas.map(transformar).join(''))
+                let tabelaEmbaralhada = `
+                <table class=tabela1>
+                    <tr>
+                        <th>Cervejas</th>
+                    </tr>
+                    <tr>
+                        ${cervejasEmbaralhadas}    
+                    </tr>
+                </table>`;
+                div.innerHTML = tabelaEmbaralhada
             }
 
             function carregarDiv(){
@@ -48,11 +63,20 @@
                 </table>`;
                 div.innerHTML = tabelaHtml
             }
+            
             let botao = document.getElementById("botaoCarregar")
             botao.onclick = carregarDiv
             
             let ordenar = document.getElementById("botaoOrdenar")
             ordenar.onclick = ordenarCervejas
+
+            let embaralhar = document.getElementById("botaoEmbaralhar")
+            embaralhar.addEventListener("click",embaralharCervejas)
+
+            function shuffle(o) {
+                for (var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
+                return o;
+            }
             
         </script>
     </html>
