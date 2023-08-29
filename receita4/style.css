@@ -1,3 +1,10 @@
-table,th,td{
-    border: 1px solid;
+
+
+.tabela1{
+    border: 2px solid;
+    border-color: red;
+    width: 20%;
+}
+tr{
+    background-color: orange;
 }
