@@ -6,10 +6,27 @@
 
         <body>
             <div id="meu amor"><button id="botaoCarregar">Carregando Cervejas</button></div>
+            <div><button id="botaoOrdenar">Ordenar Cervejas</button></div>
         </body>
         
         <script>
-            let cervejas = ["Guinnes","Heineken","Budwaiser","Brahma"]
+            let cervejas = ["Guinnes","Heineken","Budwaiser","Brahma","Amstel","Devassa"]
+
+            function ordenarCervejas(){
+                let div = document.getElementById("meu amor")
+                let cervejasOrdenadas = cervejas.map(transformar).sort().join("")
+                let tabelaOrdenada = `
+                <table class=tabela1>
+                    <tr>
+                        <th>Cervejas</th>
+                    </tr>
+                    <tr>
+                        ${cervejasOrdenadas}    
+                    </tr>
+                </table>`;
+                div.innerHTML = tabelaOrdenada
+         
+            }
 
             function transformar(item){
                 return `<table class="tabela1"><tr><td>${item}</td></tr></table>`
@@ -32,6 +49,9 @@
             }
             let botao = document.getElementById("botaoCarregar")
             botao.onclick = carregarDiv
-
+            
+            let ordenar = document.getElementById("botaoOrdenar")
+            ordenar.onclick = ordenarCervejas
+            
         </script>
     </html>
