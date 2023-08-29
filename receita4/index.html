@@ -11,8 +11,8 @@
         </body>
         
         <script>
-            let cervejas = ["Guinnes","Heineken","Budwaiser","Brahma","Amstel","Devassa"]
-            
+            let cervejasInicial = ["Guinnes","Heineken","Budwaiser","Brahma","Amstel","Devassa"]
+            let cervejas = shuffle(cervejasInicial)
             function transformar(item){
                 return `<table class="tabela1"><tr><td>${item}</td></tr></table>`
             }
@@ -35,6 +35,7 @@
 
             function embaralharCervejas(){
                 let div = document.getElementById("meu amor")
+                let cervejas = shuffle(cervejasInicial)
                 let cervejasEmbaralhadas = shuffle(cervejas.map(transformar).join(''))
                 let tabelaEmbaralhada = `
                 <table class=tabela1>
