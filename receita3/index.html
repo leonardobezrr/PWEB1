@@ -1,9 +1,16 @@
 <!DOCTYPE html>
 <html>   
 
-   <head>
-      <meta charset="UTF-8">      
-   </head>
+  <head>
+    <meta charset="UTF-8">      
+  </head>
+
+  <style>
+    #show{
+      opacity: 0;
+      transition: opacity 1s;
+    }
+  </style>
 
    <body>
       <div id="teste">
@@ -13,16 +20,25 @@
       <div>
         <button id = "botaoCarregar">Run</button>
       </div>
-      <div id="show"></div>            
+      <div id="show"></div>
    </body>  
 
    <script>
-    var opacidade = 0;
         function carregarDiv(){
+            var opacidade = Number(show.style.opacity);
             let div = document.getElementById("show")
-            div.innerHTML = "<h1>Heineken</h1>"
+            div.innerHTML = "<h1>Guinness</h1>"
+            
+            if(opacidade === 0){
+              
+              div.style.opacity = '1';
 
-            opacidade = 1
+            }else{
+
+              div.style.opacity = '0';
+
+            }
+            
         }
         let botao = document.getElementById("botaoCarregar")
         botao.onclick = carregarDiv
