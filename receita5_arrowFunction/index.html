@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+    </head>
+
+    <body>
+        <div><button id="botaoCarregar">Carregando cervejas...</button></div>
+        <div id="meu amor"></div>
+    </body>
+
+    <script>
+        let cervejas =  ["Guinness","Heineken","Becks","Brahma"]
+
+        // const transformar = (item) => {
+        //     return `<h1>${item}</h1>`
+        // } 
+        // ARROW FUNCTION
+        // item => `<h1>${item}</h1>` - > passa ele direto como parâmetro 
+
+        //function carregarDiv(){}
+        const carregarDiv = () => {
+            const div = document.getElementById("meu amor")
+            const cervejasHtml = cervejas.map(item => `<h1>${item}</h1>`)
+            div.innerHTML = `${cervejasHtml.join("\n")}`   
+        }
+
+        let botao = document.getElementById("botaoCarregar")
+        botao.addEventListener("click",carregarDiv)
+
+
+    </script>
+
+</html>
