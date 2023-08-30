@@ -20,14 +20,14 @@
         // item => `<h1>${item}</h1>` - > passa ele direto como parâmetro 
 
         //function carregarDiv(){}
-        const carregarDiv = () => {
+        const carregarDiv = cervs => {
             const div = document.getElementById("meu amor")
-            const cervejasHtml = cervejas.map(item => `<h1>${item}</h1>`)
+            const cervejasHtml = cervs.map(item => `<h1>${item}</h1>`)
             div.innerHTML = `${cervejasHtml.join("\n")}`   
         }
 
         let botao = document.getElementById("botaoCarregar")
-        botao.addEventListener("click",carregarDiv)
+        botao.addEventListener("click",() => carregarDiv(cervejas))
 
 
     </script>
