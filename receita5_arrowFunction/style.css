@@ -1,0 +1,19 @@
+
+
+.tabela1{
+    border: 2px solid;
+    border-color: red;
+    width: 20%;
+}
+
+tr{
+    background-color: orange;
+}
+
+#ordenar{
+    padding: 5px 0px 0px 0px;
+}
+
+#embaralhar {
+    padding: 5px 0px 0px 0px;
+}
