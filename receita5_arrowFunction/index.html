@@ -6,7 +6,8 @@
 
     <body>
         <div id="meu amor"><button id="botaoCarregar">Carregando nomes</button></div>
-        <div id="ordenar"><button id="botaoOrdenar">Ordenar nomes</button></div>
+        <div id="ordenar"><a href="#" id ="botaoOrdenar" >Ordenar cervejas</a></div>
+        <!-- <div id="ordenar"><button id="botaoOrdenar">Ordenar nomes</button></div> -->
         <div id="embaralhar"><button id="botaoEmbaralhar">Embaralhar nomes</button></div>
     </body>
     
@@ -67,10 +68,14 @@
         
         let botao = document.getElementById("botaoCarregar")
         botao.onclick = () => carregarDiv(cervejas)
-        
-        let ordenar = document.getElementById("botaoOrdenar")
-        ordenar.onclick = () => ordenarCervejas(cervejas)
 
+        document.getElementById("botaoOrdenar").addEventListener("click",function(event){
+            event.preventDefault(); // Impede a ação padrão do link (navegar para outra página)
+            ordenarCervejas(cervejas) // Chama o método desejado
+        })
+
+        // let ordenar = document.getElementById("botaoOrdenar")
+        // ordenar.onclick = () => ordenarCervejas(cervejas)
         let embaralhar = document.getElementById("botaoEmbaralhar")
         embaralhar.addEventListener("click",() =>embaralharCervejas(cervejasInicial))
 
