@@ -5,10 +5,11 @@
     </head>
 
     <body>
-        <div id="meu amor"><button id="botaoCarregar">Carregando nomes</button></div>
+        <div id="meu amor"><a href="#" id="botaoCarregar">Carregar nomes</a></div>
         <div id="ordenar"><a href="#" id ="botaoOrdenar" >Ordenar nomes</a></div>
-        <!-- <div id="ordenar"><button id="botaoOrdenar">Ordenar nomes</button></div> -->
         <div id="embaralhar"><a href="#" id="botaoEmbaralhar">Embaralhar nomes</a></div>
+        <!-- <div id="ordenar"><button id="botaoOrdenar">Ordenar nomes</button></div> -->
+
     </body>
     
     <script>
@@ -66,8 +67,12 @@
             div.innerHTML = tabelaHtml
         }
         
-        let botao = document.getElementById("botaoCarregar")
-        botao.onclick = () => carregarDiv(cervejas)
+        document.getElementById("botaoCarregar").addEventListener("click",function(event){
+            event.preventDefault();
+            carregarDiv(cervejas)
+        })
+        // let botao = document.getElementById("botaoCarregar")
+        // botao.onclick = () => carregarDiv(cervejas)
 
         document.getElementById("botaoOrdenar").addEventListener("click",function(event){
             event.preventDefault(); // Impede a ação padrão do link (navegar para outra página)

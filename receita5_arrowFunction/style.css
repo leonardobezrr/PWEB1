@@ -10,10 +10,14 @@ tr{
     background-color: orange;
 }
 
-#ordenar{
-    padding: 5px 0px 0px 0px;
+#ordenar,#embaralhar,#meu amor{
+    padding: 10px 0px 0px 0px;
 }
 
-#embaralhar {
-    padding: 5px 0px 0px 0px;
+a:link{
+    color:rgb(149, 97, 0);
+}
+
+a:hover{
+    color:rgb(126, 94, 0);
 }
