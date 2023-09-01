@@ -6,9 +6,9 @@
 
     <body>
         <div id="meu amor"><button id="botaoCarregar">Carregando nomes</button></div>
-        <div id="ordenar"><a href="#" id ="botaoOrdenar" >Ordenar cervejas</a></div>
+        <div id="ordenar"><a href="#" id ="botaoOrdenar" >Ordenar nomes</a></div>
         <!-- <div id="ordenar"><button id="botaoOrdenar">Ordenar nomes</button></div> -->
-        <div id="embaralhar"><button id="botaoEmbaralhar">Embaralhar nomes</button></div>
+        <div id="embaralhar"><a href="#" id="botaoEmbaralhar">Embaralhar nomes</a></div>
     </body>
     
     <script>
@@ -73,11 +73,15 @@
             event.preventDefault(); // Impede a ação padrão do link (navegar para outra página)
             ordenarCervejas(cervejas) // Chama o método desejado
         })
-
         // let ordenar = document.getElementById("botaoOrdenar")
         // ordenar.onclick = () => ordenarCervejas(cervejas)
-        let embaralhar = document.getElementById("botaoEmbaralhar")
-        embaralhar.addEventListener("click",() =>embaralharCervejas(cervejasInicial))
+        
+        document.getElementById("botaoEmbaralhar").addEventListener("click",function(event){
+            event.preventDefault(); // Impede a ação padrão do link (navegar para outra página)
+            embaralharCervejas(cervejasInicial) // Chama o método desejado
+        })
+        // let embaralhar = document.getElementById("botaoEmbaralhar")
+        // embaralhar.addEventListener("click",() =>embaralharCervejas(cervejasInicial))
 
         function shuffle(o) {
             for (var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
