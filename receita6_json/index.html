@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <div><button id="botaoCarregar">Carregando cervejas...</button></div>
+    <div id="cervejasDiv"></div>
+</body>
+
+<script>
+    let cervejas = [
+        {
+            name:"Guinness",
+            alcohol: "10%"
+        },
+        {
+            name:"Heineken",
+            alcohol:"11%"
+        },
+        {
+            name:"Brahma",
+            alcohol:"6%"
+        },
+        {
+            name:"Amstel",
+            alcohol:"8%"
+        }
+    ]
+
+    const carregarDiv = cervs => {
+        const div = document.getElementById("cervejasDiv")
+        const itensHtml = cervs.map(item => `<div>${item["name"]} -- ${item["alcohol"]}</div>`)
+        div.innerHTML = `${itensHtml.join("\n")}`
+    }
+
+    let botao = document.getElementById("botaoCarregar")
+    botao.addEventListener("click",()=>carregarDiv(cervejas))
+
+</script>
+
+</html>
