@@ -2,6 +2,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -31,8 +32,29 @@
 
     const carregarDiv = cervs => {
         const div = document.getElementById("cervejasDiv")
-        const itensHtml = cervs.map(item => `<div>${item["name"]} -- ${item["alcohol"]}</div>`)
-        div.innerHTML = `${itensHtml.join("\n")}`
+        const itensName = cervs.map(item => (`<table><tr><td>${item["name"]}</td></tr></table>`)).join("")
+        const itensAlcool = cervs.map(item => (`<table><tr><td>${item["alcohol"]}</td></tr></table>`)).join("")
+        div.innerHTML = `
+        </br>
+        <table class="tabela1">
+            <tr>
+                <td class="titulo">
+                    Nome                                         
+                </td>
+                <td class="titulo">                    
+                    Álcool                                           
+                </td>
+            </tr>    
+            <tr>
+                <td>
+                    ${itensName}    
+                </td>
+                <td>
+                    ${itensAlcool} 
+                </td>
+            </tr>
+        </table>
+        `
     }
 
     let botao = document.getElementById("botaoCarregar")
