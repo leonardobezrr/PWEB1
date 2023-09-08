@@ -45,8 +45,8 @@
         }
     ]
 
-    const carregarDiv = cervs => {
-        const div = document.getElementById("cervejasDiv")
+    const carregarDiv = (cervs,elementDiv = "cervejasDiv") => {
+        const div = document.getElementById(elementDiv)
 
         const propriedades = ["name","alcohol","style","ibu"]
         const titulos = ["Nome","Álcool","Estilo","IBU"]
