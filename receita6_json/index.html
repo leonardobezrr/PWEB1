@@ -47,40 +47,20 @@
 
     const carregarDiv = cervs => {
         const div = document.getElementById("cervejasDiv")
-        const itensName = cervs.map(item => (`<table><tr><td>${item["name"]}</td></tr></table>`)).join("")
-        const itensAlcool = cervs.map(item => (`<table><tr><td>${item["alcohol"]}</td></tr></table>`)).join("")
-        const itensStyle = cervs.map(item => (`<table><tr><td>${item["style"]}</td></tr></table>`)).join("")
-        const itensIbu = cervs.map(item => (`<table><tr><td>${item["ibu"]}</td></tr></table>`)).join("")
+
+        const propriedades = ["name","alcohol","style","ibu"]
+        const titulos = ["Nome","Álcool","Estilo","IBU"]
+
+        const linhas = cervs.map(item => (`<tr>${propriedades.map(prop =>`<td>${item[prop]}</td>`).join("")}</tr>`)).join("")
+
         div.innerHTML = `
         </br>
         <table class="tabela1">
-            <tr>
-                <th class="titulo">
-                    Nome                                         
-                </th>
-                <th class="titulo">                    
-                    Álcool                                           
-                </th>
-                <th class="titulo">                    
-                    Estilo                                           
-                </th>
-                <th class="titulo">                    
-                    IBU                                           
-                </th>
+            <tr>                
+                ${titulos.map(tit => `<th class = "titulo">${tit}</th>`).join("")}        
             </tr>    
             <tr>
-                <td >
-                    ${itensName}    
-                </td>
-                <td >
-                    ${itensAlcool} 
-                </td>
-                <td >
-                    ${itensStyle} 
-                </td>
-                <td >
-                    ${itensIbu} 
-                </td>
+                ${linhas}
             </tr>
         </table>
         `
