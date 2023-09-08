@@ -45,11 +45,8 @@
         }
     ]
 
-    const carregarDiv = (cervs,elementDiv = "cervejasDiv") => {
-        const div = document.getElementById(elementDiv)
-
-        const propriedades = ["name","alcohol","style","ibu"]
-        const titulos = ["Nome","Álcool","Estilo","IBU"]
+    const carregarDiv = (cervs,elementDiv = "cervejasDiv",titulos = ["Nome","Álcool","Estilo","IBU"],propriedades = ["name","alcohol","style","ibu"] ) => {
+        const div = document.getElementById(elementDiv) 
 
         const linhas = cervs.map(item => (`<tr>${propriedades.map(prop =>`<td>${item[prop]}</td>`).join("")}</tr>`)).join("")
 
