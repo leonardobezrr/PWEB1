@@ -14,23 +14,34 @@
     let cervejas = [
         {
             name:"Guinness",
-            alcohol: "10%"
+            alcohol: "10%",
+            style:"Kinnean",
+            ibu:"22"
         },
         {
             name:"Heineken",
-            alcohol:"11%"
+            alcohol:"11%",
+            style:"Pilsen",
+            ibu:"28"
+            
         },
         {
             name:"Brahma",
-            alcohol:"6%"
+            alcohol:"6%",
+            style:"Single",
+            ibu:"20"
         },
         {
             name:"Amstel",
-            alcohol:"8%"
+            alcohol:"8%",
+            style:"Pilsen",
+            ibu:"21"
         },
         {
-            name:"Puro Malte",
-            alcohol: "10%"
+            name:"Devassa",
+            alcohol: "10%",
+            style:"Envelhecida",
+            ibu:"30"
         }
     ]
 
@@ -38,6 +49,8 @@
         const div = document.getElementById("cervejasDiv")
         const itensName = cervs.map(item => (`<table><tr><td>${item["name"]}</td></tr></table>`)).join("")
         const itensAlcool = cervs.map(item => (`<table><tr><td>${item["alcohol"]}</td></tr></table>`)).join("")
+        const itensStyle = cervs.map(item => (`<table><tr><td>${item["style"]}</td></tr></table>`)).join("")
+        const itensIbu = cervs.map(item => (`<table><tr><td>${item["ibu"]}</td></tr></table>`)).join("")
         div.innerHTML = `
         </br>
         <table class="tabela1">
@@ -48,6 +61,12 @@
                 <th class="titulo">                    
                     Álcool                                           
                 </th>
+                <th class="titulo">                    
+                    Estilo                                           
+                </th>
+                <th class="titulo">                    
+                    IBU                                           
+                </th>
             </tr>    
             <tr>
                 <td >
@@ -55,6 +74,12 @@
                 </td>
                 <td >
                     ${itensAlcool} 
+                </td>
+                <td >
+                    ${itensStyle} 
+                </td>
+                <td >
+                    ${itensIbu} 
                 </td>
             </tr>
         </table>
