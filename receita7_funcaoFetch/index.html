@@ -17,9 +17,8 @@
         const carregarDiv = cs =>{
             const div = document.getElementById("cervejasDiv")
             const itensHtml = cs.map(({name,alcohol,malts,style}) =>`
-            <table class = "tabela1">
-                <tr >
-                    <td class = "bordas">
+                <tr>
+                    <td>
                         ${name}
                     </td>
                     <td>
@@ -31,18 +30,20 @@
                     <td>
                         ${style}  
                     </td>
-                </tr>
-            `)
+                </tr>`
+            )
             div.innerHTML = `
-            <table border="1" class="tabela1">
+
+            <table border="1" class = "tabela1">
                 <tr>                
                         <th>Nome</th>                    
                         <th>Teor Alcóolico</th>
                         <th>Malte</th>    
                         <th>Estilo</th>
                     ${itensHtml.join("\n")}
-                </tr>                
-            </table>`
+                </tr>
+            </table>`  
+            
         }
 
         async function carregarCervejas (){
