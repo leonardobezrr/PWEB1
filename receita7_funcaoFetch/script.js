@@ -1,21 +1,18 @@
 let cervejas =[]
 
-//cs é um array de cervejas, testando se o git prestou no novo computador
+//cs é um array de cervejas
 const carregarDiv = cs =>{
     const div = document.getElementById("cervejasDiv")
-    const itensHtml = cs.map(({name,alcohol,malts,style}) =>`
+    const itensHtml = cs.map(({id,bank_name,account_number}) =>`
         <tr>
             <td>
-                ${name}
+                ${id}
             </td>
             <td>
-                ${alcohol}  
+                ${bank_name}  
             </td>
             <td>
-                ${malts}  
-            </td>
-            <td>
-                ${style}  
+                ${account_number}  
             </td>
         </tr>`
     )
@@ -23,19 +20,18 @@ const carregarDiv = cs =>{
 
     <table border="1" class = "tabela1">
         <tr>                
-                <th>Nome</th>                    
-                <th>Teor Alcóolico</th>
-                <th>Malte</th>    
-                <th>Estilo</th>
+                <th>Id</th>                    
+                <th>Nome do Banco</th>
+                <th>Número da Conta</th>    
             ${itensHtml.join("\n")}
         </tr>
     </table>`  
     
 }
 
-async function carregarCervejas (){
+async function carregarCervejas (link){
     try{
-        let res = await fetch("https://random-data-api.com/api/v2/beers?size=3")
+        let res = await fetch(link)
         cervejas = await res.json()
         carregarDiv(cervejas)
     }catch(err){
@@ -44,4 +40,4 @@ async function carregarCervejas (){
 }
 
 let botao = document.getElementById("botaoCarregar")
-botao.addEventListener("click", () => carregarCervejas())
+botao.addEventListener("click", () => carregarCervejas("https://random-data-api.com/api/v2/banks?size=3"))
