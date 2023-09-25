@@ -16,38 +16,31 @@
         //cs é um array de cervejas
         const carregarDiv = cs =>{
             const div = document.getElementById("cervejasDiv")
-            const itensHtml = cs.map(({name,alcohol,malts,style}) =>`
-            <table class = "tabela1">
-                <tr >
-                    <td class = "bordas">
+            const itensHtml = cs.map(({name,alcohol,malts,style}) =>`      
+                <tr>
+                    <td>
                         ${name}
                     </td>
-                    <td class = "bordas">
+                    <td>
                         ${alcohol}  
                     </td>
-                    <td class = "bordas">
+                    <td>
                         ${malts}  
                     </td>
-                    <td class = "bordas">
+                    <td>
                         ${style}  
                     </td>
                 </tr>
-            </table>`)
+            `)
             div.innerHTML = `
-            <table class = "titulo">
-                <td>
-                    <th class = "bordas">Nome</th>                       
-                </td>
-                <td>
-                    <th class = "bordas">Teor Alcóolico</th>                       
-                </td>
-                <td>
-                    <th class = "bordas">Malte</th>                       
-                </td>
-                <td>
-                    <th class = "bordas">Estilo</th>                       
-                </td>
-                ${itensHtml.join("\n")}
+            <table border="1" class="tabela1">
+                <tr>                
+                        <th>Nome</th>                    
+                        <th>Teor Alcóolico</th>
+                        <th>Malte</th>    
+                        <th>Estilo</th>
+                    ${itensHtml.join("\n")}
+                </tr>                
             </table>`
         }
 
