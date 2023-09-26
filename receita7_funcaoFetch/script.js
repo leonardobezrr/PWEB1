@@ -1,6 +1,3 @@
-let cervejas =[]
-
-//cs é um array de cervejas
 const carregarDiv = cs =>{
     const div = document.getElementById("cervejasDiv")
     const itensHtml = cs.map(({id,bank_name,account_number}) =>`
@@ -29,15 +26,3 @@ const carregarDiv = cs =>{
     
 }
 
-async function carregarCervejas (link){
-    try{
-        let res = await fetch(link)
-        cervejas = await res.json()
-        carregarDiv(cervejas)
-    }catch(err){
-        document.getElementById("cervejasDiv").innerHTML = "Lascouu Bahia..."
-    }
-}
-
-let botao = document.getElementById("botaoCarregar")
-botao.addEventListener("click", () => carregarCervejas("https://random-data-api.com/api/v2/banks?size=3"))
