@@ -40,8 +40,7 @@
     }
 
     function carregarCervejas2(){
-        fetch("https://random-data-api.com/api/v2/beers?size=3").then(chegouRespostaDoFetch)
-        document.getElementById("cervejasDiv").innerHTML = `Fazendo requisição`          
+        fetch("https://random-data-api.com/api/v2/beers?size=3").then(res => res.json().then(json => carregarDiv(json)))        
     }
 
 
