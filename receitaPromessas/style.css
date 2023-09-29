@@ -1,0 +1,11 @@
+.tabela1{
+    text-align: center;
+    padding: 5px;
+  }
+  
+th{
+    background-color: rgb(158, 155, 155);
+}
+tr{
+    background-color: rgb(232, 232, 232);
+}

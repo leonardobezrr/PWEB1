@@ -2,6 +2,7 @@
 <html>   
 <head>
     <meta charset="UTF-8">      
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -16,8 +17,38 @@
     //cs é um array de cervejas
     const carregarDiv = cs => {
         const div = document.getElementById("cervejasDiv")
-        const itensHtml = cs.map( ({name,alcohol,ibu,style}) => `<div>${name} -- ${style}-- ${alcohol} -- ${ibu}</div>` ) 
-        div.innerHTML = `${itensHtml.join("\n")}`
+        const itensHtml = cs.map( ({name,alcohol,ibu,style}) => `
+        <tr>
+            <td>
+                ${name}
+            </td>
+            <td>
+                ${style}
+            </td>
+            <td>
+                ${alcohol}
+            </td>
+            <td>
+                ${ibu}
+            </td>       
+        </tr>
+        ` ) 
+        div.innerHTML = `
+        <table class = "tabela1">
+            <th>
+                Nome
+            </th>
+            <th>
+                Estilo
+            </th>
+            <th>
+                Álcool
+            </th>
+            <th>
+                IBU
+            </th>
+            ${itensHtml.join("\n")}
+        </table>`
     }
 
     async function carregarCervejas(){
