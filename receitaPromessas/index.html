@@ -44,6 +44,8 @@
             res => res.json(
         ).then(
             json => carregarDiv(json))
+        ).catch(
+            err => document.getElementById("cervejasDiv").innerHTML = `Fudeu... ${err}`
         )        
         document.getElementById("cervejasDiv").innerHTML = `Fazendo requisição`          
 
