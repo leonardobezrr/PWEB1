@@ -64,8 +64,8 @@
         res.json().then(chegouRespostaDoJson)
     }
 
-    function carregarCervejas2(){
-        fetch("https://random-data-api.com/api/v2/banks?size=3").then(
+    function carregarCervejas2(link){
+        fetch(link).then(
             res => res.json(
         ).then(
             json => carregarDiv(json))
@@ -78,7 +78,7 @@
 
 
     let botao = document.getElementById("botaoCarregar")
-    botao.addEventListener("click", () => carregarCervejas2() )                 
+    botao.addEventListener("click", () => carregarCervejas2("https://random-data-api.com/api/v2/banks?size=3") )                 
 
 </script>
 </html>
