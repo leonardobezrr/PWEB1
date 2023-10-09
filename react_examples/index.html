@@ -12,17 +12,69 @@
         <script>
             ReactDOM.render(
                 React.createElement(
-                    'h1',
-                    {id:'mariaPrea'}, 
+                    'table',
+                    {id:'table'}, 
+                    // Linha 0 - th - título
                     React.createElement(
-                        'span',
-                        null,
-                        'React ',
-                        React.createElement('em',null,'é muito'),
+                        'tr',
+                        null,                        
+                        React.createElement(
+                            'th',
+                            null,
+                            'Nome'                            
+                        ),
+                        React.createElement(
+                            'th',
+                            null,
+                            'Telefone'                            
+                        )
                     ),
-                    ' massa!'
-                ),
-                
+                    //Linha 1 - tr - dados
+                    React.createElement(
+                        'tr',
+                        null,
+                        React.createElement(
+                            'td',
+                            null,
+                            'Leo'                            
+                        ),
+                        React.createElement(
+                            'td',
+                            null,
+                            '84 9 9981-4724'                            
+                        )                    
+                    ),
+                    //Linha 2 - tr - dados
+                    React.createElement(
+                        'tr',
+                        null,
+                        React.createElement(
+                            'td',
+                            null,
+                            'Davi'                            
+                        ),
+                        React.createElement(
+                            'td',
+                            null,
+                            '84 9 9782-7754'                            
+                        )                    
+                    ),
+                    //Linha 3 - tr - dados
+                    React.createElement(
+                        'tr',
+                        null,
+                        React.createElement(
+                            'td',
+                            null,
+                            'Rica'                            
+                        ),
+                        React.createElement(
+                            'td',
+                            null,
+                            '84 9 9999-4574'                            
+                        )                    
+                    )
+                ),                
                 document.getElementById('app')
             );
         </script>
