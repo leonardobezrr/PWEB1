@@ -10,82 +10,42 @@
         <script src="libs/react-dom.js"></script>
         <script src="libs/babel.js"></script>
 
-        <script>
+        <script type="text/babel">
             ReactDOM.render(
-                React.createElement(
-                    'table',
-                    {id:'table',border:1}, 
-                    // Linha 0 - th - título
-                    React.createElement(
-                        'thead',
-                        null,
-                        React.createElement(
-                            'tr',
-                            null,                        
-                            React.createElement(
-                                'th',
-                                null,
-                                'Nome'                            
-                            ),
-                            React.createElement(
-                                'th',
-                                null,
-                                'Telefone'                            
-                            )
-                        ),
-                    ),
-                    //Linha 1 - tr - dados
-                    React.createElement(
-                        'tbody',
-                        null,
-                        React.createElement(
-                        'tr',
-                        null,
-                        React.createElement(
-                            'td',
-                            null,
-                            'Leo'                            
-                        ),
-                        React.createElement(
-                            'td',
-                            null,
-                            '84 9 9981-4724'                            
-                        )                    
-                    ),
-                    //Linha 2 - tr - dados
-                    React.createElement(
-                        'tr',
-                        null,
-                        React.createElement(
-                            'td',
-                            null,
-                            'Davi'                            
-                        ),
-                        React.createElement(
-                            'td',
-                            null,
-                            '84 9 9782-7754'                            
-                        )                    
-                    ),
-                    //Linha 3 - tr - dados
-                    React.createElement(
-                        'tr',
-                        null,
-                        React.createElement(
-                            'td',
-                            null,
-                            'Rica'                            
-                        ),
-                        React.createElement(
-                            'td',
-                            null,
-                            '84 9 9999-4572'                            
-                        )                    
-                    )
-                    ),
-                ),                
-                document.getElementById('app')
-            );
+                <div id="app">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>
+                                    Nome    
+                                </th>
+                                <th>
+                                    Telefone
+                                </th>    
+                            </tr>   
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    Leo
+                                </td>  
+                                <td>
+                                    84999814724
+                                </td>  
+                            </tr>   
+                            <tr>
+                                <td>
+                                    Davi    
+                                </td>   
+                                <td>
+                                    84998745745    
+                                </td> 
+                            </tr>
+                        </tbody>
+                    </table>    
+                </div>
+                ,document.getElementById('app')    
+            )
         </script>
     </body>
 
