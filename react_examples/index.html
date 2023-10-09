@@ -16,21 +16,28 @@
                     {id:'table'}, 
                     // Linha 0 - th - título
                     React.createElement(
-                        'tr',
-                        null,                        
+                        'thead',
+                        null,
                         React.createElement(
-                            'th',
-                            null,
-                            'Nome'                            
+                            'tr',
+                            null,                        
+                            React.createElement(
+                                'th',
+                                null,
+                                'Nome'                            
+                            ),
+                            React.createElement(
+                                'th',
+                                null,
+                                'Telefone'                            
+                            )
                         ),
-                        React.createElement(
-                            'th',
-                            null,
-                            'Telefone'                            
-                        )
                     ),
                     //Linha 1 - tr - dados
                     React.createElement(
+                        'tbody',
+                        null,
+                        React.createElement(
                         'tr',
                         null,
                         React.createElement(
@@ -74,6 +81,7 @@
                             '84 9 9999-4574'                            
                         )                    
                     )
+                    ),
                 ),                
                 document.getElementById('app')
             );
