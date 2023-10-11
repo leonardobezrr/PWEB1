@@ -11,40 +11,34 @@
         <script src="libs/babel.js"></script>
 
         <script type="text/babel">
+
+            function TabelaBebidas(){
+                return (
+                    <div id="app">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Nome</th>
+                                    <th>Telefone</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Leo</td>
+                                    <td>84999814724</td>
+                                </tr>
+                                <tr>
+                                    <td>Davi</td>
+                                    <td>84998745745</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                );
+            }
+            
             ReactDOM.render(
-                //tabela
-                <div id="app">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>
-                                    Nome    
-                                </th>
-                                <th>
-                                    Telefone
-                                </th>    
-                            </tr>   
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    Leo
-                                </td>  
-                                <td>
-                                    84999814724
-                                </td>  
-                            </tr>   
-                            <tr>
-                                <td>
-                                    Davi    
-                                </td>   
-                                <td>
-                                    84998745745    
-                                </td> 
-                            </tr>
-                        </tbody>
-                    </table>    
-                </div>
+                <TabelaBebidas/>
                 ,document.getElementById('app')    
             )
         </script>
