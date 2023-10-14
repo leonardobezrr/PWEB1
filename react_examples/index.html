@@ -13,36 +13,48 @@
 
         <script type="text/babel">
 
-            function Cabecalho(){
-                return(
-                    <h1>Minha tabela de bebidas</h1>
-                );
+            var Arrayy = [
+            {
+                "nome": "Leo",
+                "telefone": 8499987454
+            },
+            {
+                "nome": "André",
+                "telefone": 84567848475
+            }
+            ];
+
+            function Cabecalho() {
+            return (
+                <h1>Minha tabela de bebidas</h1>
+            );
             }
 
-            function TabelaBebidas(){
+            function TabelaBebidas() {
                 return (
                     <div id="app">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Nome</th>
-                                    <th>Telefone</th>
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Telefone</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {Arrayy.map(
+                            (item, index) => (
+                                <tr key={index}>
+                                    <td>{item.nome}</td>
+                                    <td>{item.telefone}</td>
                                 </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Leo</td>
-                                    <td>84999814724</td>
-                                </tr>
-                                <tr>
-                                    <td>Davi</td>
-                                    <td>84998745745</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                            )
+                        )}
+                        </tbody>
+                    </table>
                     </div>
                 );
             }
+
             
             ReactDOM.render(                
                 <Cabecalho/>
