@@ -3,6 +3,7 @@
 
     <head>
         <title>React Zero</title>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <div id="cabecalho"></div>
@@ -18,11 +19,27 @@
             var Arrayy = [
             {
                 "nome": "Leo",
-                "telefone": 8499987454
+                "telefone": "8499987454",
+                "estado":"RN",
+                "cidade":"Caicó"
             },
             {
                 "nome": "André",
-                "telefone": 84567848475
+                "telefone": "8496748475",
+                "estado":"RN",
+                "cidade":"Natal"
+            },
+            {
+                "nome": "Luffy",
+                "telefone": "8494745975",
+                "estado":"RN",
+                "cidade":"Jucurutu"
+            },
+            {
+                "nome": "Marco",
+                "telefone": "8499848475",
+                "estado":"RN",
+                "cidade":"Currais Novos"
             }
             ];
 
@@ -40,6 +57,8 @@
                         <tr>
                             <th>Nome</th>
                             <th>Telefone</th>
+                            <th>Cidade</th>
+                            <th>Estado</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -48,6 +67,8 @@
                                 <tr key={index}>
                                     <td>{item.nome}</td>
                                     <td>{item.telefone}</td>
+                                    <td>{item.cidade}</td>
+                                    <td>{item.estado}</td>
                                 </tr>
                             )
                         )}
