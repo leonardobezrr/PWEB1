@@ -11,7 +11,7 @@
 
         <script type="text/babel">
                                     //(prop)
-            const TabelaBebidas = ({titulo,cabecalho:[cabecalho1,cabecalho2]}) => {
+            const TabelaBebidas = ({titulo,cabecalho:[cabecalho1,cabecalho2,cabecalho3,cabecalho4]}) => {
                             // {prop.titulo}
                 return(
                     <div>
@@ -24,25 +24,22 @@
                                     </th>   
                                     <th>
                                         {cabecalho2}    
+                                    </th>
+                                    <th>
+                                        {cabecalho4}    
                                     </th> 
+                                    <th>
+                                        {cabecalho3}    
+                                    </th>  
                                 </tr>    
                             </thead>
-                            <tbody>
-                                <tr>
-                                    <td>
-                                        Havana    
-                                    </td>
-                                    <td>
-                                        Engenho Anísio Santiago    
-                                    </td>
-                                </tr>    
-                            </tbody>
+                            
                         </table> 
                     </div>
                 )
             }
 
-            const valoresCabecalho = ["Nome","Marca"]
+            const valoresCabecalho = ["Nome","Marca","IBU","Nacionalidade"]
 
             ReactDOM.render(
                 <TabelaBebidas titulo="Tabela de Bebidas" cabecalho={valoresCabecalho}/>,
