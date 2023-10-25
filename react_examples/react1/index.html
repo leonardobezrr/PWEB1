@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+    <head>
+        <title>React Zero</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="cabecalho"></div>
+        <div id="botao"></div>
+        <div><br></div>
+        <div id="app"></div>
+        <script src="../libs/react.js"></script>
+        <script src="../libs/react-dom.js"></script>
+        <script src="../libs/babel.js"></script>
+
+        <script type="text/babel">
+
+            var Arrayy = [
+            {
+                "nome": "Leo",
+                "telefone": "8499987454",
+                "estado":"RN",
+                "cidade":"Caicó"
+            },
+            {
+                "nome": "André",
+                "telefone": "8496748475",
+                "estado":"RN",
+                "cidade":"Natal"
+            },
+            {
+                "nome": "Luffy",
+                "telefone": "8494745975",
+                "estado":"RN",
+                "cidade":"Jucurutu"
+            },
+            {
+                "nome": "Marco",
+                "telefone": "8499848475",
+                "estado":"RN",
+                "cidade":"Currais Novos"
+            }
+            ];
+
+            function Cabecalho() {
+            return (
+                <h1>Minha tabela de bebidas</h1>
+            );
+            }
+
+            function TabelaBebidas() {
+                return (
+                    <div id="app">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Telefone</th>
+                            <th>Cidade</th>
+                            <th>Estado</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {Arrayy.map(
+                            (item, index) => (
+                                <tr key={index}>
+                                    <td>{item.nome}</td>
+                                    <td>{item.telefone}</td>
+                                    <td>{item.cidade}</td>
+                                    <td>{item.estado}</td>
+                                </tr>
+                            )
+                        )}
+                        </tbody>
+                    </table>
+                    </div>
+                );
+            }
+
+            function clickBotao(){
+                ReactDOM.render(      
+                    <TabelaBebidas/>
+                    ,document.getElementById('app')
+                )
+            }
+
+            const botaoElement = (
+                <button id="botao" onClick={clickBotao}>Gerar dados</button>
+            );
+            
+            ReactDOM.render(                
+                <Cabecalho/>
+                ,document.getElementById('cabecalho')    
+            )
+
+            
+
+            ReactDOM.render(
+                botaoElement,
+                document.getElementById('botao')
+            )
+        </script>
+    </body>
+
+</html>
