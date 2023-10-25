@@ -10,10 +10,12 @@
         <script src="../libs/babel.js" ></script>
 
         <script type="text/babel">
-            const TabelaBebidas = (props) => {
+                                    //(prop)
+            const TabelaBebidas = ({titulo}) => {
+                            // {prop.titulo}
                 return(
                     <div>
-                        <h1>{props.titulo}</h1>   
+                        <h1>{titulo}</h1>   
                         <table  id="tabela" border="1" >
                             <thead>
                                 <tr>
