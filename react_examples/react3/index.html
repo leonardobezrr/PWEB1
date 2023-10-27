@@ -20,7 +20,9 @@
                             <thead>
                                 <tr>
                                     <th>
-                                        {cabecalho}    
+                                        {valoresCabecalho.map((item, index) => (
+                                            <th i={index}>{item}</th>))
+                                        }                                            
                                     </th>                             
                                 </tr>    
                             </thead>
@@ -30,7 +32,7 @@
                 )
             }
 
-            const valoresCabecalho = ["Nome","Marca","IBU","Nacionalidade"]
+            const valoresCabecalho = ["Nome","Marca","IBU","Nacionalidade","Teste"]
 
             ReactDOM.render(
                 <TabelaBebidas titulo="Tabela de Bebidas" cabecalho={valoresCabecalho}/>,
