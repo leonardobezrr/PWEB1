@@ -2,6 +2,7 @@
 <html>
     <head>
         <title>React 3</title>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <div id="app" ></div>
@@ -18,21 +19,41 @@
                         <h1>{titulo}</h1>   
                         <table  id="tabela" border="1" >
                             <thead>
-                                <tr>
-                                    <th>
+                                <tr>                                    
                                         {valoresCabecalho.map((item, index) => (
                                             <th i={index}>{item}</th>))
-                                        }                                            
-                                    </th>                             
+                                        }                                                                    
                                 </tr>    
                             </thead>
-                            
+                            <tbody>
+                                {valoresBody.map((row, rowIndex) => (
+                                    <tr key={rowIndex}>
+                                    {cabecalho.map((key, columnIndex) => (
+                                        <td key={columnIndex}>{row[key]}</td>
+                                    ))}
+                                    </tr>
+                                ))}
+                            </tbody>
                         </table> 
                     </div>
                 )
             }
 
-            const valoresCabecalho = ["Nome","Marca","IBU","Nacionalidade","Teste"]
+            const valoresCabecalho = ["Nome","Marca","IBU","Nacionalidade"]
+            const valoresBody = [
+                {
+                    "Nome":"testeNome",
+                    "Marca":"testeMarca",
+                    "IBU":"testeIbu",
+                    "Nacionalidade":"testeNacionalidade"
+                },
+                {
+                    "Nome":"testeNome1",
+                    "Marca":"testeMarca1",
+                    "IBU":"testeIbu1",
+                    "Nacionalidade":"testeNacionalidade1"
+                },
+            ]
 
             ReactDOM.render(
                 <TabelaBebidas titulo="Tabela de Bebidas" cabecalho={valoresCabecalho}/>,
