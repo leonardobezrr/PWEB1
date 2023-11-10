@@ -1,6 +1,7 @@
 export function Tabela() {
     return(
         <table>
+            <thead>
             <tr>
                 <th>
                     Nome
@@ -12,6 +13,8 @@ export function Tabela() {
                     Cidade
                 </th>
             </tr>
+            </thead>
+            <tbody>
             <tr>
                 <td>
                     Leo
@@ -23,6 +26,7 @@ export function Tabela() {
                     Caicó
                 </td>
             </tr>
+            </tbody>
         </table>
     )
 }
