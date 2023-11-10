@@ -1,4 +1,4 @@
-export default function Home1() {
+export function Home1() {
     <div>
         <table>
             <tr>
