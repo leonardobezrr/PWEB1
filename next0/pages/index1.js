@@ -1,5 +1,5 @@
-export function Home1() {
-    <div>
+export function Tabela() {
+    return(
         <table>
             <tr>
                 <th>
@@ -8,7 +8,21 @@ export function Home1() {
                 <th>
                     Telefone
                 </th>
+                <th>
+                    Cidade
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    Leo
+                </td>
+                <td>
+                    84999814724
+                </td>
+                <td>
+                    Caicó
+                </td>
             </tr>
         </table>
-    </div>
+    )
 }
