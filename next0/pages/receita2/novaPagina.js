@@ -7,6 +7,7 @@ export default function Principal (){
                 Nova Página
             </h1>
             <MariaPrea/>
+            <JosePrea/>
             <Tabela/>
         </div>
     )
@@ -15,5 +16,11 @@ export default function Principal (){
 export function MariaPrea(){
     return(
         <h2>Morreu Maria Prea...</h2>
+    )
+}
+
+export function JosePrea(){
+    return(
+        <h2>Viveu José Prea...</h2>
     )
 }
