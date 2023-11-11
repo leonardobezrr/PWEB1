@@ -6,16 +6,16 @@ export default function Principal (){
             <h1>
                 Nova Página
             </h1>
-            <MariaPrea/>
+            <MariaPrea nome="Prea"/>
             <JosePrea/>
             <Tabela/>
         </div>
     )
 }
 
-export function MariaPrea(){
+export function MariaPrea({nome}){
     return(
-        <h2>Morreu Maria Prea...</h2>
+        <h2>{`Morreu Maria ${nome}...`}</h2>
     )
 }
 
