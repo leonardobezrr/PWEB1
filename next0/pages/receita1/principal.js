@@ -1,4 +1,4 @@
-import {Tabela } from "./index1";
+import {Tabela} from "./tabela";
 
 export default function Home (){
     return (
@@ -6,7 +6,7 @@ export default function Home (){
             <h2>
                 Tabela de clientes
             </h2>
-            <Tabela></Tabela>
+            <Tabela/>
         </div>
     )
 }
