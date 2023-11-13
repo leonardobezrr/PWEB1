@@ -80,10 +80,27 @@ export default function movies(){
     }
     
     return (
-        <div>
-            <div>
-                {data.Search[0].Title} --- {data.Search[0].Year}
-            </div>
-        </div>
+      <div>
+          <table>
+            <thead>
+              <tr>
+                <th>Titulo</th>
+                <th>Ano</th>
+              </tr>
+            </thead>
+            <tbody>
+            {data.Search.map((movie,i) => (
+              <tr key={i}>
+                  <td>
+                    {movie.Title}
+                  </td>
+                  <td>
+                    {movie.Year}
+                  </td>
+              </tr>
+            ))}
+            </tbody>
+          </table>
+      </div>
     )
 }
