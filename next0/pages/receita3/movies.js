@@ -17,6 +17,9 @@ export default function movies({data}){
                       <td>
                         {movie.Year}
                       </td>
+                      <td>
+                        <img src={movie.Poster} width={100} ></img> 
+                      </td>
                     </tr>
                     
                     )}
