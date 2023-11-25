@@ -19,6 +19,9 @@ export default function Movies2() {
     <div>
       {data.Search.map((m) => (
         <div key={m.imdbID}>
+          <p></p>
+          <img src={m.Poster} width="100px"></img>
+          <p></p>
           <a href={`http://www.imdb.com/title/${m.imdbID}`} target="_blank" rel="noopener noreferrer">
             {m.Title} --- {m.Year}
           </a>
