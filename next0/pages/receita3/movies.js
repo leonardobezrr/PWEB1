@@ -13,12 +13,10 @@ export default function Movies({ initialData }) {
     const res = await fetch(`http://www.omdbapi.com/?apikey=4e779fd4&s=${searchTerm}`);
     const newData = await res.json();
   
-    // Verifica se a propriedade Search existe e não está vazia
     if (newData.Search && newData.Search.length > 0) {
       setData(newData);
     } else {
       console.log('Nenhum resultado encontrado para a pesquisa.');
-      // Podes definir um estado de feedback para o usuário aqui, se necessário
     }
   };
   
